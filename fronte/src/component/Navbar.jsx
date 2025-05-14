@@ -4,7 +4,7 @@ import { LogOut, MessageSquare, Settings, User } from "lucide-react";
 
 const Navbar = () => {
   const { logout, user } = useAuthStore();
-
+  const test = user  == null ? false: true;
   return (
     <header
       className="bg-base-100 border-b border-base-300 fixed w-full top-0 z-40 
@@ -33,7 +33,7 @@ const Navbar = () => {
               <span className="hidden sm:inline">Settings</span>
             </Link>
 
-            {user || true && (
+            {test && (
               <>
                 <Link to={"/profile"} className={`btn btn-sm gap-2`}>
                   <User className="size-5" />
