@@ -29,9 +29,9 @@ useEffect(()=>{
   )
  
   return (
-    <div  className="flex-1 flex flex-col overflow-auto">
+    <div  className="flex-1 flex flex-col overflow-auto max-h-[500px]">
       <ChatHeader/>
-      <div className="flex-1 overflow-y-auto space-y-4">
+      <div className="flex-1 overflow-y-auto space-y-4 ">
           {message.map((msg)=>
           <div key={msg._id}
           className={`chat ${msg.senderId == user._id ? "chat-end":"chat-start"}`}
