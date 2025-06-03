@@ -109,13 +109,13 @@ const Sidebar = () => {
               `}
             >
               <div className="relative  lg:mx-0">
-                <div className = "flex gap-2 items-center justify-start">
+                
                 <img
                   src={user.pic || "/avatar.png"}
                   alt={user.name}
                   className="size-12 object-cover rounded-full"
                 />
-                <p>{user.name}</p> </div>
+                
                 {onlineusers.includes(user._id) && (
                   <span
                     className="absolute bottom-0 right-0 size-3 bg-green-500 
@@ -125,7 +125,7 @@ const Sidebar = () => {
               </div>
 
               {/* User info - only visible on larger screens */}
-              <div className="hidden lg:block text-left min-w-0">
+              <div className={` text-left min-w-0`}>
                 <div className="font-medium truncate">{user.name}</div>
                 <div className="text-sm text-zinc-400">
                   {onlineusers.includes(user._id) ? "Online" : "Offline"}
