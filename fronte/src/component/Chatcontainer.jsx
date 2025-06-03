@@ -29,7 +29,7 @@ useEffect(()=>{
   )
  
   return (
-    <div  className="flex-1 flex flex-col overflow-auto max-h-[500px]">
+    <div  className="flex-1 flex flex-col overflow-auto max-h-[500px] min-h-[500px]">
       <ChatHeader/>
       <div className="flex-1 overflow-y-auto space-y-4 ">
           {message.map((msg)=>
